@@ -1,0 +1,650 @@
+.hooks-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* 页面标题 */
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-title {
+  font-size: 3rem;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.page-description {
+  font-size: 1.2rem;
+  color: var(--color-textSecondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Hook导航 */
+.hooks-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.hook-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--color-cardBg);
+  border: 1px solid var(--color-border);
+  border-radius: 15px;
+  color: var(--color-textSecondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(20px);
+  text-align: left;
+}
+
+.hook-tab:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.hook-tab.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hook-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.hook-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Hook内容区域 */
+.hook-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.hook-info {
+  background: var(--color-cardBg);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+}
+
+.hook-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hook-icon-large {
+  font-size: 3rem;
+  background: var(--color-primary);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.hook-title {
+  font-size: 1.75rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.hook-description {
+  color: var(--color-textSecondary);
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.code-example {
+  margin-top: 1.5rem;
+}
+
+.code-example h3 {
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.code-example pre {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+}
+
+.code-example code {
+  color: #e6db74;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Hook演示容器 */
+.hook-demo-container {
+  background: var(--color-cardBg);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+}
+
+.hook-demo-container h3 {
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.hook-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.demo-section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.demo-section h4 {
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* useState演示样式 */
+.counter-demo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.count-display {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-text);
+  background: var(--color-primary);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.counter-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.counter-buttons button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.counter-buttons button:hover {
+  background: var(--color-secondary);
+  transform: translateY(-2px);
+}
+
+.demo-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-cardBg);
+  color: var(--color-text);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.demo-input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.greeting {
+  background: rgba(76, 175, 80, 0.1);
+  border: 1px solid #4CAF50;
+  border-radius: 8px;
+  padding: 0.75rem;
+  color: var(--color-text);
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.todo-input {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.add-btn {
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.add-btn:hover {
+  background: var(--color-secondary);
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.todo-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.todo-item.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.todo-status {
+  font-size: 1.2rem;
+}
+
+/* useEffect演示样式 */
+.timer-demo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.timer-display {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--color-text);
+  background: var(--color-primary);
+  border-radius: 15px;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  color: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.timer-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.timer-buttons button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.timer-buttons button:hover {
+  background: var(--color-secondary);
+  transform: translateY(-2px);
+}
+
+.window-info {
+  text-align: center;
+  background: rgba(33, 150, 243, 0.1);
+  border: 1px solid #2196F3;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.window-info p {
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.tip {
+  font-size: 0.9rem;
+  color: var(--color-textSecondary);
+  font-style: italic;
+}
+
+/* useReducer演示样式 */
+.reducer-demo {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.reducer-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.reducer-buttons button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reducer-buttons button:hover {
+  background: var(--color-secondary);
+  transform: translateY(-2px);
+}
+
+.action-log {
+  background: rgba(255, 193, 7, 0.1);
+  border-left: 4px solid #ffc107;
+  border-radius: 0 8px 8px 0;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* useContext演示样式 */
+.context-component {
+  background: rgba(156, 39, 176, 0.1);
+  border: 1px solid #9c27b0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.context-component h5 {
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.context-component p {
+  color: var(--color-textSecondary);
+  margin-bottom: 0.5rem;
+}
+
+.context-component button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-primary);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.context-component button:hover {
+  background: var(--color-secondary);
+}
+
+/* Hook使用要点 */
+.hook-tips {
+  margin-top: 3rem;
+}
+
+.hook-tips h2 {
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.tip-card {
+  background: var(--color-cardBg);
+  backdrop-filter: blur(20px);
+  border-radius: 15px;
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.tip-card h3 {
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.tip-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tip-card li {
+  color: var(--color-textSecondary);
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.tip-card li::before {
+  content: '•';
+  color: var(--color-primary);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .hook-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .hooks-nav {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .hooks-page {
+    padding: 1rem 0;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+  }
+  
+  .hooks-nav {
+    grid-template-columns: 1fr;
+  }
+  
+  .hook-tab {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hook-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hook-icon-large {
+    align-self: center;
+  }
+  
+  .counter-demo {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .counter-buttons {
+    justify-content: center;
+  }
+  
+  .todo-input {
+    flex-direction: column;
+  }
+  
+  .timer-buttons {
+    flex-wrap: wrap;
+  }
+  
+  .reducer-buttons {
+    flex-wrap: wrap;
+  }
+  
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .hook-info,
+  .hook-demo-container {
+    padding: 1.5rem;
+  }
+  
+  .demo-section {
+    padding: 1rem;
+  }
+  
+  .timer-display {
+    font-size: 2rem;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .count-display {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .counter-buttons button,
+  .timer-buttons button,
+  .reducer-buttons button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* 动画效果 */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.count-display {
+  animation: bounce 0.5s ease-in-out;
+}
+
+.timer-display {
+  animation: bounce 0.3s ease-in-out;
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+  .hook-tab,
+  .tip-card,
+  .demo-section {
+    border-width: 2px;
+  }
+  
+  .todo-item,
+  .context-component,
+  .window-info {
+    border-width: 2px;
+  }
+}
+
+/* 减少动画模式支持 */
+@media (prefers-reduced-motion: reduce) {
+  .count-display,
+  .timer-display {
+    animation: none;
+  }
+  
+  .hook-tab,
+  .tip-card,
+  .counter-buttons button,
+  .timer-buttons button,
+  .reducer-buttons button {
+    transition: none;
+  }
+}
